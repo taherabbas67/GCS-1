@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroundControl</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="left-nav">
+            <h3>GroundControl</h3>
+        </div>
+        <div class="right-nav">
+            <button class="connect-btn">Connect</button>
+        </div>
+    </nav>
+    <div class="body-main">
+        <div class="body-left">
+            <div class="body-left-top">
+                <div class="info-container">
+                    <p class="arm-txt">Vehicle Ready to ARM</p>
+                </div>
+                <div class="info-container">
+                    <p class="bat-volt">12.6V</p>
+                    <p class="alt">0m</p>
+                    <p class="">0m/s</p>
+                </div>
+                <div class="info-container">
+                    <p class="">92%</p>
+                    <p class="">12sats</p>
+                    <p class="">loiter</p>
+                </div>
+                <!-- <div class="info-container">
+                    <p class="">loiter</p>
+                </div> -->
+            </div>
+            <div class="body-left-bottom">
+                <div class="rows">
+                    <button class="btn">arm</button>
+                    <button class="btn-red">disarm</button>
+                </div>
+                <div class="rows">
+                    <button class="btn">takeoff</button>
+                    <button class="btn">land</button>
+                </div>
+                <div class="rows">
+                    <button class="btn">RTH</button>
+                    <button class="btn-red">reboot</button>
+                </div>
+                <div class="rows">
+                    <div class="dropdown">
+                        <button class="dropbtn">set flight mode</button>
+                        <div class="dropdown-content">
+                          <a href="#">loiter</a>
+                          <a href="#">alt hold</a>
+                          <a href="#">stabilize</a>
+                          <a href="#">auto</a>
+                          <a href="#">guided</a>
+                          <a href="#">RTL</a>
+                          <a href="#">land</a>
+                        </div>
+                    </div>
+                </div>                  
+            </div>
+        </div>
+        <div class="body-right">
+            <div id="map" style="width: 900px; height: 700px;"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
